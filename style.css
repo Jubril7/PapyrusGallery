@@ -484,9 +484,9 @@ hr {
 
 .gallery-grid {
   display: flex;
-  gap: 20px;
-  animation: scrollLeft 20s linear infinite;
-  width: max-content;
+  gap: 10px; /* Add 10px space between images */
+  width: calc((300px + 10px) * 12); /* Adjust width to fit all images (6 original + 6 duplicates, including gaps) */
+  animation: scrollLeft 40s linear infinite; /* Slower scrolling (40s duration) */
 }
 
 .gallery-grid img {
@@ -496,13 +496,13 @@ hr {
   border-radius: 8px;
 }
 
-/* Animation for scrolling */
+/* Animation for seamless scrolling */
 @keyframes scrollLeft {
   from {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
