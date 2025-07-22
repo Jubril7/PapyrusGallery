@@ -1,273 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Papyrus Gallery</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="images/papyrus.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papyrus Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/papyrus.png">
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="nav-left">
-    <img src="images/papyrus.png" alt="Papyrus Logo" class="logo" />
-    <span class="tagline">Home of Elegant Cards</span>
-  </div>
-  <div class="visitor-counter" id="visitorCounter">Visitors: 0</div>
-
-<ul class="nav-menu">
-  <li><a href="#birthday">Birthday</a></li>
-  <li><a href="#anniversary">Anniversary</a></li>
-  <li><a href="#friendship">Friendship</a></li>
-  <li><a href="#newyear">New Year</a></li>
-  <li><a href="#mothersday">Mother’s Day</a></li>
-  <li><a href="#gallery">Gallery</a></li>
-  <li><a href="#about">About Us</a></li>
-  <li><a href="#contact">Contact Us</a></li>
-  <li><a href="#sitemap">Site Map</a></li>
-</ul>
-</nav>
-
-<div class="filter-bar">
-  <input type="text" id="searchInput" placeholder="Search products by name..." oninput="filterCards()" />
-
-  <select id="categoryFilter" onchange="filterCards()">
-    <option value="all">All Categories</option>
-    <option value="birthday">Birthday</option>
-    <option value="anniversary">Anniversary</option>
-    <option value="friendship">Friendship</option>
-    <option value="newyear">New Year</option>
-    <option value="mothersday">Mother’s Day</option>
-  </select>
-</div>
-
-
-<section id="topselling" class="card-section">
-  <h2>Top Selling Cards & Gifts</h2>
-  <div class="card-grid">
-    <div class="card-item">
-      <img src="images/top1.jpg" alt="Top Seller 1" />
-      <div class="card-content">
-        <p class="card-title">Luxury Birthday Card</p>
-        <p class="card-price">₦2500</p>
-      </div>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="images\papyrus.png" alt="Papyrus Logo" class="logo" />
+      <span class="tagline">Home of Elegant Cards</span>
+      <div class="visitor-counter" id="visitorCounter">Visitor count: 0</div>
     </div>
-    <div class="card-item">
-      <img src="images/top2.jpg" alt="Top Seller 2" />
-      <div class="card-content">
-        <p class="card-title">Romantic Anniversary Box</p>
-        <p class="card-price">₦3500</p>
-      </div>
-    </div>
-    <div class="card-item">
-      <img src="images/top3.jpg" alt="Top Seller 3" />
-      <div class="card-content">
-        <p class="card-title">Friendship Memory Frame</p>
-        <p class="card-price">₦2000</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- <div class="visitor-counter" id="visitorCounter">Visitor count: 0</div> -->
 
-
-<!-- 🎂  Birthday – 6 demo items (scrolls right→left) -->
-<section id="birthday" class="card-section">
-  <h2>Birthday</h2>
-  <div class="card-slider ltr-layout">
-    <div class="card-item" onclick="openPopup(this)"
-     data-title="Sparkle Wishes"
-     data-description="A glittery birthday card perfect for joyful celebrations."
-     data-price="₦1 500"
-     data-img="https://via.placeholder.com/200x160?text=Birthday+1">
-      <img src="https://via.placeholder.com/200x160?text=Birthday+1" alt="Birthday Card 1">
-      <div class="card-content">
-        <p class="card-title">Sparkle Wishes</p>
-        <p class="card-price">₦1 500</p>
-      </div>
-    </div>
-    <div class="card-item" onclick="openPopup(this)"
-     data-title="Sparkle Wishes"
-     data-description="A glittery birthday card perfect for joyful celebrations."
-     data-price="₦1 500"
-     data-img="https://via.placeholder.com/200x160?text=Birthday+1">
-      <img src="https://via.placeholder.com/200x160?text=Birthday+1" alt="Birthday Card 1">
-      <div class="card-content">
-        <p class="card-title">Sparkle Wishes</p>
-        <p class="card-price">₦1 500</p>
-      </div>
-    </div>
-    <div class="card-item" onclick="openPopup(this)"
-     data-title="Confetti Blast"
-     data-description="A glittery birthday card perfect for joyful celebrations."
-     data-price="₦1 800"
-     data-img="https://via.placeholder.com/200x160?text=Birthday+1">
-      <img src="https://via.placeholder.com/200x160?text=Birthday+2" alt="Birthday Card 2">
-      <div class="card-content">
-        <p class="card-title">Confetti Blast</p>
-        <p class="card-price">₦1 800</p>
-      </div>
-    </div>
-    <div class="card-item">
-      <img src="https://via.placeholder.com/200x160?text=Birthday+3" alt="Birthday Card 3">
-      <div class="card-content">
-        <p class="card-title">Luxury Gold Foil</p>
-        <p class="card-price">₦2 500</p>
-      </div>
-    </div>
-    <div class="card-item">
-      <img src="https://via.placeholder.com/200x160?text=Birthday+4" alt="Birthday Card 4">
-      <div class="card-content">
-        <p class="card-title">Cute Cupcake</p>
-        <p class="card-price">₦1 200</p>
-      </div>
-    </div>
-    <div class="card-item">
-      <img src="https://via.placeholder.com/200x160?text=Birthday+5" alt="Birthday Card 5">
-      <div class="card-content">
-        <p class="card-title">Rainbow Balloons</p>
-        <p class="card-price">₦1 600</p>
-      </div>
-    </div>
-    <div class="card-item">
-      <img src="https://via.placeholder.com/200x160?text=Birthday+6" alt="Birthday Card 6">
-      <div class="card-content">
-        <p class="card-title">Vintage Floral</p>
-        <p class="card-price">₦1 900</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 💍 Anniversary -->
-<section id="anniversary" class="card-section">
-  <h2>Anniversary</h2>
-  <div class="card-grid">
-    <!-- 3 demo items -->
-    <div class="card-item">
-      <img src="https://via.placeholder.com/200x160?text=Anniversary+1" alt="Anniv 1">
-      <div class="card-content">
-        <p class="card-title">Love in Gold</p>
-        <p class="card-price">₦3 000</p>
-      </div>
-    </div>
-    <!-- …add more -->
-  </div>
-</section>
-
-<!-- 👫 Friendship -->
-<section id="friendship" class="card-section">
-  <h2>Friendship</h2>
-  <div class="card-grid">
-    <div class="card-item">
-      <img src="https://via.placeholder.com/200x160?text=Friend+1" alt="Friendship 1">
-      <div class="card-content">
-        <p class="card-title">Bestie Forever</p>
-        <p class="card-price">₦1 300</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 🎆 New Year -->
-<section id="newyear" class="card-section">
-  <h2>New Year</h2>
-  <div class="card-grid">
-    <div class="card-item">
-      <img src="https://via.placeholder.com/200x160?text=New+Year+1" alt="NY 1">
-      <div class="card-content">
-        <p class="card-title">Fireworks Gala</p>
-        <p class="card-price">₦2 000</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 👩‍👧 Mother’s Day -->
-<section id="mothersday" class="card-section">
-  <h2>Mother’s Day</h2>
-  <div class="card-grid">
-    <div class="card-item">
-      <img src="https://via.placeholder.com/200x160?text=Mom+1" alt="Mom 1">
-      <div class="card-content">
-        <p class="card-title">Blossom Love</p>
-        <p class="card-price">₦1 700</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<div id="popup" class="popup-overlay" onclick="closePopup(event)">
-  <div class="popup-box">
-    <span class="popup-close" onclick="closePopup(event)">×</span>
-    <img id="popup-img" src="" alt="Card Image">
-    <h3 id="popup-title"></h3>
-    <p id="popup-description"></p>
-    <p id="popup-price"></p>
-
-    <hr />
-    <div class="rating-feedback">
-      <label for="rating">Your Rating:</label>
-      <div class="stars" id="starRating">
-        <span onclick="setRating(1)">★</span>
-        <span onclick="setRating(2)">★</span>
-        <span onclick="setRating(3)">★</span>
-        <span onclick="setRating(4)">★</span>
-        <span onclick="setRating(5)">★</span>
-      </div>
-
-      <label for="feedback">Your Feedback:</label>
-      <textarea id="feedback" placeholder="Write your thoughts..."></textarea>
-
-      <button onclick="submitFeedback()">Submit</button>
-    </div>
-    <div id="feedbackSuccess" class="feedback-success">Feedback submitted successfully!</div>
-  </div>
-</div>
-
-
-<!-- ✅ Gallery Section -->
-<section id="gallery" class="gallery-section">
-  <h2>Gallery</h2>
-  <div class="gallery-grid">
-    <img src="https://via.placeholder.com/200x160?text=Card+1" alt="Gallery Image 1">
-    <img src="https://via.placeholder.com/200x160?text=Card+2" alt="Gallery Image 2">
-    <img src="https://via.placeholder.com/200x160?text=Card+3" alt="Gallery Image 3">
-    <img src="https://via.placeholder.com/200x160?text=Gift+1" alt="Gallery Image 4">
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="footer-top">
-    <!-- Left: Logo + Tagline -->
-    <div class="footer-column">
-      <img src="images/papyrus.png" alt="Papyrus Logo" class="footer-logo" />
-      <p class="tagline">Home of Elegant Cards</p>
-    </div>
-
-    <!-- Center: Contact Us -->
-    <div class="footer-column">
-      <h3>Contact Us</h3>
-      <p>Email: support@papyrusgallery.com</p>
-      <p>Phone: +234 800 123 4567</p>
-    </div>
-
-    <!-- Right: Address -->
-    <div class="footer-column">
-      <h3>Our Location</h3>
-      <p>123 Papyrus Street</p>
-      <p>Lagos, Nigeria</p>
-    </div>
-  </div>
-
-  <hr />
-
-  <!-- Bottom: Site Map -->
-  <div class="footer-bottom">
-    <h3>Site Map</h3>
-    <ul class="sitemap-list">
-      <li><a href="#topselling">Top Selling</a></li>
+    <ul class="nav-menu">
       <li><a href="#birthday">Birthday</a></li>
       <li><a href="#anniversary">Anniversary</a></li>
       <li><a href="#friendship">Friendship</a></li>
@@ -276,15 +28,262 @@
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#sitemap">Site Map</a></li>
     </ul>
-  </div>
-</footer>
+    
+  </nav>
 
-<script src="app.js" defer></script>
-<div id="ticker" class="ticker">
-  Loading current date, time, and location...
-</div>
+  <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Search products by name..." oninput="filterCards()" />
+
+    <select id="categoryFilter" onchange="filterCards()">
+      <option value="all">All Categories</option>
+      <option value="birthday">Birthday</option>
+      <option value="anniversary">Anniversary</option>
+      <option value="friendship">Friendship</option>
+      <option value="newyear">New Year</option>
+      <option value="mothersday">Mother’s Day</option>
+    </select>
+  </div>
+
+
+  <section id="topselling" class="card-section">
+    <h2>Top Selling Cards & Gifts</h2>
+    <div class="card-grid">
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Top Seller 1" />
+        <div class="card-content">
+          <p class="card-title">Luxury Birthday Card</p>
+          <p class="card-price">₦2500</p>
+        </div>
+      </div>
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Top Seller 2" />
+        <div class="card-content">
+          <p class="card-title">Romantic Anniversary Box</p>
+          <p class="card-price">₦3500</p>
+        </div>
+      </div>
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Top Seller 3" />
+        <div class="card-content">
+          <p class="card-title">Friendship Memory Frame</p>
+          <p class="card-price">₦2000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 🎂  Birthday – 6 demo items (scrolls right→left) -->
+  <section id="birthday" class="card-section">
+    <h2>Birthday</h2>
+    <div class="card-slider ltr-layout">
+      <div class="card-item" onclick="openPopup(this)" data-title="Sparkle Wishes"
+        data-description="A glittery birthday card perfect for joyful celebrations." data-price="₦1 500"
+        data-img="https://via.placeholder.com/200x160?text=Birthday+1">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Birthday Card 1">
+        <div class="card-content">
+          <p class="card-title">Sparkle Wishes</p>
+          <p class="card-price">₦1 500</p>
+        </div>
+      </div>
+      <div class="card-item" onclick="openPopup(this)" data-title="Sparkle Wishes"
+        data-description="A glittery birthday card perfect for joyful celebrations." data-price="₦1 500"
+        data-img="https://via.placeholder.com/200x160?text=Birthday+1">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Birthday Card 1">
+        <div class="card-content">
+          <p class="card-title">Sparkle Wishes</p>
+          <p class="card-price">₦1 500</p>
+        </div>
+      </div>
+      <div class="card-item" onclick="openPopup(this)" data-title="Confetti Blast"
+        data-description="A glittery birthday card perfect for joyful celebrations." data-price="₦1 800"
+        data-img="https://via.placeholder.com/200x160?text=Birthday+1">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Birthday Card 2">
+        <div class="card-content">
+          <p class="card-title">Confetti Blast</p>
+          <p class="card-price">₦1 800</p>
+        </div>
+      </div>
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Birthday Card 3">
+        <div class="card-content">
+          <p class="card-title">Luxury Gold Foil</p>
+          <p class="card-price">₦2 500</p>
+        </div>
+      </div>
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Birthday Card 4">
+        <div class="card-content">
+          <p class="card-title">Cute Cupcake</p>
+          <p class="card-price">₦1 200</p>
+        </div>
+      </div>
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Birthday Card 5">
+        <div class="card-content">
+          <p class="card-title">Rainbow Balloons</p>
+          <p class="card-price">₦1 600</p>
+        </div>
+      </div>
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Birthday Card 6">
+        <div class="card-content">
+          <p class="card-title">Vintage Floral</p>
+          <p class="card-price">₦1 900</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💍 Anniversary -->
+  <section id="anniversary" class="card-section">
+    <h2>Anniversary</h2>
+    <div class="card-grid">
+      <!-- 3 demo items -->
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Anniv 1">
+        <div class="card-content">
+          <p class="card-title">Love in Gold</p>
+          <p class="card-price">₦3 000</p>
+        </div>
+      </div>
+      <!-- …add more -->
+    </div>
+  </section>
+
+  <!-- 👫 Friendship -->
+  <section id="friendship" class="card-section">
+    <h2>Friendship</h2>
+    <div class="card-grid">
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Friendship 1">
+        <div class="card-content">
+          <p class="card-title">Bestie Forever</p>
+          <p class="card-price">₦1 300</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎆 New Year -->
+  <section id="newyear" class="card-section">
+    <h2>New Year</h2>
+    <div class="card-grid">
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="NY 1">
+        <div class="card-content">
+          <p class="card-title">Fireworks Gala</p>
+          <p class="card-price">₦2 000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 👩‍👧 Mother’s Day -->
+  <section id="mothersday" class="card-section">
+    <h2>Mother’s Day</h2>
+    <div class="card-grid">
+      <div class="card-item">
+        <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Mom 1">
+        <div class="card-content">
+          <p class="card-title">Blossom Love</p>
+          <p class="card-price">₦1 700</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="popup" class="popup-overlay" onclick="closePopup(event)">
+    <div class="popup-box">
+      <span class="popup-close" onclick="closePopup(event)">×</span>
+      <img id="popup-img" src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Card Image">
+      <h3 id="popup-title"></h3>
+      <p id="popup-description"></p>
+      <p id="popup-price"></p>
+
+      <hr />
+      <div class="rating-feedback">
+        <label for="rating">Your Rating:</label>
+        <div class="stars" id="starRating">
+          <span onclick="setRating(1)">★</span>
+          <span onclick="setRating(2)">★</span>
+          <span onclick="setRating(3)">★</span>
+          <span onclick="setRating(4)">★</span>
+          <span onclick="setRating(5)">★</span>
+        </div>
+
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" placeholder="Write your thoughts..."></textarea>
+
+        <button onclick="submitFeedback()">Submit</button>
+      </div>
+      <div id="feedbackSuccess" class="feedback-success">Feedback submitted successfully!</div>
+    </div>
+  </div>
+
+
+  <!-- ✅ Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Gallery Image 1">
+      <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Gallery Image 2">
+      <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Gallery Image 3">
+      <img src="oksana-berko-Daonsb-GSUM-unsplash.jpg" alt="Gallery Image 4">
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <!-- Left: Logo + Tagline -->
+      <div class="footer-column">
+        <img src="images\papyrus.png" alt="Papyrus Logo" class="footer-logo" />
+        <p class="tagline">Home of Elegant Cards</p>
+      </div>
+
+      <!-- Center: Contact Us -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: support@papyrusgallery.com</p>
+        <p>Phone: +234 800 123 4567</p>
+      </div>
+
+      <!-- Right: Address -->
+      <div class="footer-column">
+        <h3>Our Location</h3>
+        <p>123 Papyrus Street</p>
+        <p>Lagos, Nigeria</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Bottom: Site Map -->
+    <div class="footer-bottom">
+      <h3>Site Map</h3>
+      <ul class="sitemap-list">
+        <li><a href="#topselling">Top Selling</a></li>
+        <li><a href="#birthday">Birthday</a></li>
+        <li><a href="#anniversary">Anniversary</a></li>
+        <li><a href="#friendship">Friendship</a></li>
+        <li><a href="#newyear">New Year</a></li>
+        <li><a href="#mothersday">Mother’s Day</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <div id="ticker" class="ticker">
+    Loading current date, time, and location...
+  </div>
 
 
 </body>
+
 </html>
